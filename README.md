@@ -60,7 +60,9 @@
 * Create a template using Handlebars or EJS with a form where you can create a new winner for a given year and category.
   * If the first and last name exist, use the existing awardee ID. Otherwise, create a new unique identifier (ex: max(id) + 1).
   * Consider validation middleware.
-    * Consider validation middleware.
+    * Ex: The user cannot enter a year that does not exist in the JSON file.
+    * First and last name longer than 3 characters.
+    * Motivation not empty.
 
 
 
