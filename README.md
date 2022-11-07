@@ -17,4 +17,7 @@
   * Week 3: Express + RCSM  
 * Create the API entry point, routers, controllers and services (ormodels). Be careful that you can have multiple routers. Think of the number of entities that this JSON document contains.  
 
-## *Tasks to do :*
+## *API must provide the following features :*
+* F1: List all winners (id, first name, last name).
+  * Consider paging.
+  * Watch out for duplicates!!
