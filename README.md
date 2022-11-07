@@ -52,7 +52,8 @@
 * F15: Add a new winner to a given year and category given.
   * If both first and last name exist, use the existing recipient ID. Otherwise, create a new unique identifier (ex: max(id) + 1).
 
-
+## *Documentation :*
+&nbsp;&nbsp;&nbsp;&nbsp;Ajoutez une documentation Swagger à toutes les fonctionnalités F1-F15. Dédiez la route >/api-docs pour la documentation Swagger.
 
 
 
