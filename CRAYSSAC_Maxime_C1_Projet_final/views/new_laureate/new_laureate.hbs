@@ -1,0 +1,58 @@
+<div class="row m-5">
+    <h1><i class="bi bi-person-plus-fill"></i> New laureates</h1>
+</div>
+
+{{# if table}}
+    <div class="alert alert-{{table.color}} alert-dismissible fade show">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>{{table.res}}</strong>
+        {{# ifCond table.color "===" "success"}}
+            {{# each table.data}}
+                {{@key}} : {{this}};
+            {{/each}}
+        {{/ifCond}}
+        {{# ifCond table.color "===" "danger"}}
+            {{table.data}}
+        {{/ifCond}}
+
+    </div>
+{{/if}}
+
+<form id="new_laureate_form" method="post" class="form-inline" action="/new_laureate/">
+    <div class="form-group">
+        <label for="category"><i class="bi bi-tag-fill"></i> Category :</label><br>
+        <select class="form-select" name="category" id="category">
+            <option value="" selected>Please choose a category</option>
+            {{# each categories}}
+                <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
+    </div><br>
+    <div class="form-group">
+        <label for="year"><i class="bi bi-calendar"></i> Year :</label>
+        <input type="text" name="year" class="form-control" id="year" placeholder="1911">
+    </div><br>
+    <div class="form-group">
+        <label for="first_name"><i class="bi bi-person-badge"></i> First Name :</label>
+        <input type="text" name="first_name" class="form-control" id="first_name" placeholder="Maxime">
+    </div><br>
+    <div class="form-group">
+        <label for="surname"><i class="bi bi-person-badge-fill"></i> Last Name :</label>
+        <input type="text" name="surname" class="form-control" id="surname" placeholder="Crayssac">
+    </div><br>
+    <div class="form-group">
+        <label for="motivation"><i class="bi bi-pencil-square"></i> Motivation :</label>
+        <textarea name="motivation" class="form-control" id="motivation" rows="5" placeholder='"motivation"'></textarea>
+    </div><br>
+    <div class="row mx-auto" style="width: 125px;">
+        <div class="col">
+            <Button type="button" class="btn btn-success" onclick="formSubmit()"><i class="bi bi-send"></i> Submit</Button>
+        </div>
+    </div>
+</form><br><br>
+
+<script>
+    function formSubmit() {
+        document.getElementById("new_laureate_form").submit();
+    }
+</script>

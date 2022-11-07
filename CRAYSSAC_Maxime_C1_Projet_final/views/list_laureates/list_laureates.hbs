@@ -1,0 +1,84 @@
+<div class="row m-5">
+    <h1><i class="bi bi-person-lines-fill"></i> List laureates</h1>
+</div>
+
+<div class="row my-4">
+    <div class="col-9"><h4><i class="bi bi-tags-fill"></i> Categories :</h4></div>
+    <div class="col-3">
+        <form id="list_laureates_form" method="post" class="form-inline" action="/list_laureates/">
+            <select class="form-select" name="category" id="category" onchange="formSubmit()">
+                {{# unless category}}
+                    <option value="" selected>Please choose a category</option>
+                {{/unless}}
+                {{# each categories}}
+                    <option value="{{this}}"{{# ifCond ../category "===" this}}selected{{/ifCond}}>{{this}}</option>
+                {{/each}}
+            </select>
+        </form>
+    </div>
+</div>
+
+{{# if category}}
+    <div class="row my-2">
+        <div class="col-9">
+            <h4><i class="bi bi-table"></i> Table result for <a style="font-weight: bold; color: #BB8A52;">{{category}}</a> :</h4>
+        </div>
+        <div class="col-3">
+            <form class="d-flex">
+                <input class="form-control" type="text" id="search" placeholder="Search in table">
+                <button class="btn" type="button" id="deselect"><i class="bi bi-x-square-fill" style="color: #BB8A52"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="row m-5 border">
+        <table class="table table-bordered table-hover border-dark">
+            <thead>
+                <tr>
+                    <th><i class="bi bi-person-badge"></i> First name</th>
+                    <th><i class="bi bi-person-badge-fill"></i> Last name</th>
+                    <th><i class="bi bi-calendar"></i> Year</th>
+                </tr>
+            </thead>
+            <tbody id="research">
+            {{# if laureates}}
+                {{# each laureates}}
+                    <tr>
+                        <td>{{this.firstname}}</td>
+                        <td>{{this.surname}}</td>
+                        <td>{{this.year}}</td>
+                    </tr>
+                {{/each}}
+            {{else}}
+                <tr><td>No laureates.</td></tr>
+            {{/if}}
+            </tbody>
+        </table>
+    </div>
+
+{{/if}}
+
+
+
+<script>
+    function formSubmit() {
+        document.getElementById("list_laureates_form").submit();
+    }
+
+    $(document).ready(function(){
+        $("#search").on("keyup", function() {
+            let value = $(this).val().toLowerCase();
+            $("#research tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+    $(document).ready(function(){
+        $('button[id="deselect"]').on("click", function() {
+            let value = $(this).val().toLowerCase();
+            $("#research tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
