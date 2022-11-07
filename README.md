@@ -9,13 +9,10 @@
 ## *Tasks to do :*
 &nbsp;&nbsp;&nbsp;&nbsp;● Create a new NodeJS project.  
 &nbsp;&nbsp;&nbsp;&nbsp;● Create a REST API using the RCS or RCSM template.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ RCS: Routers - Controllers - Services
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ RCSM: Routers - Controllers - Services - Models
-● Try to refer to work done in the first three weeks
-to structure your application.
-○ Week 1: Read/Write to a file
-○ Week 2: Express + RCS
-○ Week 3: Express + RCSM
-● Create the API entry point, routers, controllers and services (or
-models). Be careful that you can have multiple routers. Think of the number
-of entities that this JSON document contains.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ RCS: Routers - Controllers - Services  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ RCSM: Routers - Controllers - Services - Models  
+&nbsp;&nbsp;&nbsp;&nbsp;● Try to refer to work done in the first three weeks to structure your application.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ Week 1: Read/Write to a file  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ Week 2: Express + RCS  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ Week 3: Express + RCSM  
+&nbsp;&nbsp;&nbsp;&nbsp;● Create the API entry point, routers, controllers and services (ormodels). Be careful that you can have multiple routers. Think of the number of entities that this JSON document contains.  
