@@ -53,7 +53,14 @@
   * If both first and last name exist, use the existing recipient ID. Otherwise, create a new unique identifier (ex: max(id) + 1).
 
 ## *Documentation :*
-&nbsp;&nbsp;&nbsp;&nbsp;Ajoutez une documentation Swagger à toutes les fonctionnalités F1-F15. Dédiez la route >/api-docs pour la documentation Swagger.
+&nbsp;&nbsp;&nbsp;&nbsp;Add Swagger documentation to all F1-F15 features. Dedicate the `/api-docs` route for Swagger documentation.
+
+## *Views :*
+* Create a model (template) using Handlebars or EJS, in which there is a drop-down list with all categories filled in. When the user chooses a category from the list, display all Nobel laureates in this category (first name, last name, year).
+* Create a template using Handlebars or EJS with a form where you can create a new winner for a given year and category.
+  * If the first and last name exist, use the existing awardee ID. Otherwise, create a new unique identifier (ex: max(id) + 1).
+  * Consider validation middleware.
+    * Consider validation middleware.
 
 
 
