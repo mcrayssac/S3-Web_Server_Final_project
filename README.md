@@ -1,6 +1,4 @@
-# S3-Web_Server_Final_project
-
-## A REST API project with Node.js, Express and Handlebars
+# S3-Web_Server_Final_project : A REST API project with Node.js, Express and Handlebars
 
 ## *What is this project ?* 
 &nbsp;&nbsp;&nbsp;&nbsp;In this project, we created a REST API with NodeJS to serve data from a JSON database.
